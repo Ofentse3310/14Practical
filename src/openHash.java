@@ -34,16 +34,28 @@ public class openHash {
             arr[index] = item;
         }
 
-        public static void delete(int[] arr,int item){
+        public static void delete(int[] arr, int item) {
             int index = hash(item);
 
-            while(arr[index] != -1){
-                if(arr[index] == item){
+            while (arr[index] != -1) {
+                if (arr[index] == item) {
                     arr[index] = -2;
                     return;
                 }
             }
             index = (index + 1) % size;
+        }
+
+        public void lookup() {
+            for (int i = 0; i < size; i++) {
+                if (arr[i] == -1) {
+                    System.out.println(i);
+                } else if (arr[i] == -2) {
+                    System.out.println(i);
+                } else {
+                    System.out.println(arr[i]);
+                }
+            }
         }
     }
 }
