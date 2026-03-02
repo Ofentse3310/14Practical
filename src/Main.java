@@ -1,7 +1,10 @@
 import java.text.DecimalFormat;
+
+import static java.util.Objects.hash;
+
 public class Main {
     public static int N = 30;
-    public static void main (String[]args){
+    public static <insert> void main (String[]args){
         DecimalFormat twoD = new DecimalFormat("0.00");
         DecimalFormat fourD = new DecimalFormat("0.0000");
         DecimalFormat fiveD = new DecimalFormat("0.00000");
@@ -20,6 +23,7 @@ public class Main {
         for (repetition = 0; repetition < repetitions; repetition++) {
             start = System.currentTimeMillis();
 
+            hash();
 
 
 
